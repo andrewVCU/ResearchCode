@@ -5,7 +5,7 @@
   the blast output. The protein fasta file is used to filter out the self hits. Filtering criteria is set to E value <= 1.0E-7
   and percent identity >= 30.00%.
   
-  **Usage:** BlastFilter.py <proteins.fa> <blast.out> <organism name>
+  **Usage:** BlastFilter.py <proteins.fa> <blast.out> <organism_name>
   
   **Sample Commandline Run:**
     
