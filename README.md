@@ -38,7 +38,7 @@
   This is a script that parses through a summary file output of batch entrez in order to obtain the taxonomy string from a 
   given accession number. It will then append the blast file that is given as input with the taxonomy string in the final column
   
-  **Usage:** No usage as of now. Files are given to the script from the editor or IDE. 
+  **Usage:** BatchEntrezTrim.py <batchEntrez.out> <FilteredBlast.out> <organism>
  
 - **TopVirusAndBacterialHits**
   This script sorts through the output file from BatchEntrezTrim and returns a file that has the top hit labeled as virus and top hit 
