@@ -37,7 +37,7 @@ def pullProtIDs(fasta):
         return outfile.name
 
 def blastFilter(selfProts, allHits):
-    print("---------------------------------------------\nRunning blastFilter on: " + protFasta +"\n---------------------------------------------\n")
+    print("---------------------------------------------\nRunning blastFilter on: " + allHits +"\n---------------------------------------------\n")
     percentComplete = 0
     with open(allHits, 'r') as infile:
         lines = infile.readlines()
