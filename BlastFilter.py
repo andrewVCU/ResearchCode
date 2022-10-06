@@ -1,6 +1,10 @@
 import os
 import sys
 
+"""
+TODO: Update to include argparser to use for arguments
+"""
+
 #Initial inputs
 
 #Used for pullProtIDs

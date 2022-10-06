@@ -3,6 +3,8 @@
 Created on Mon Apr 11 21:52:48 2022
 
 @author: awhal
+TODO:
+Update to include Argparser for argument passing
 """
 import sys
 batchEntrez = sys.argv[1]
@@ -10,9 +12,6 @@ filteredBlast = sys.argv[2]
 outName = sys.argv[3]
 
 
-"""batchEntrez = "./Scripts/YungSlug/YSFallBatchEntrez.out"
-filteredBlast = "./Scripts/YungSlug/YungSlug_FilteredBlast.out"
-organism = "YungSlug"""
 
 def dictCreate(fileName):
 
