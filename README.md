@@ -52,7 +52,7 @@
   **Usage:** python SharedHits.py --file1 <FirstBlastFile.out> --file2 <SecondBlastFile.out> --outfile <Out_File_Name>
 
   **Out File Example**
-  '''
+  '''console
     Shared Hits: 94
     Query1	Query2	Match
     YungSlug-final_77	0305phi8-36_ORF087	MBK8467753.1
