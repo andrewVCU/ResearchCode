@@ -47,6 +47,23 @@
   **Usage:** No usage as of now. Files are given to the script from the editor or IDE.
 
   **SharedHits.py**
-  This script takes two lists of accession numbers, currated for Batch Entrez, and compiles a list of numbers that are common between the two files, giving you shared blast hits between two runs or organisms. 
+  This script takes two Blast output files and currates a list of shared hits between the two files with the corresponding query numbers from both files.  
 
-  **Usage:** python SharedHits.py --file1 <FirstEntrezFile.out> --file2 <SecondEntrezFile.out> --outfile <Out_File_Name>
+  **Usage:** python SharedHits.py --file1 <FirstBlastFile.out> --file2 <SecondBlastFile.out> --outfile <Out_File_Name>
+
+  **Out File Example**
+  '''
+    Shared Hits: 94
+    Query1	Query2	Match
+    YungSlug-final_77	0305phi8-36_ORF087	MBK8467753.1
+    YungSlug-final_NlpC/P60	0305phi8-36_ORF147	AYP68591.1
+    YungSlug-final_NlpC/P60	0305phi8-36_ORF147	YP_002300361.1
+    YungSlug-final_NlpC/P60	0305phi8-36_ORF147	YP_008770021.1
+    YungSlug-final_NlpC/P60	0305phi8-36_ORF147	QMV48392.1
+    YungSlug-final_NlpC/P60	0305phi8-36_ORF147	QPX71646.1
+    .
+    .
+    .
+    .
+    .
+  '''
