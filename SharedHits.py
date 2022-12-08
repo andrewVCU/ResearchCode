@@ -2,6 +2,7 @@
 Created on Wed Oct 5 2022
 
 @author: Andrew Hale
+TODO: Make faster with dictionaries
 """
 import argparse
 

@@ -6,12 +6,17 @@ Created on Mon Apr 11 21:52:48 2022
 TODO:
 Update to include Argparser for argument passing
 """
+
 import sys
 batchEntrez = sys.argv[1]
 filteredBlast = sys.argv[2]
 outName = sys.argv[3]
 
-
+"""
+batchEntrez = "CP51_BatchEntrez.out"
+filteredBlast = "CP51_FilteredBlast.out"
+outName = "CP51_Taxon.out"
+"""
 
 def dictCreate(fileName):
 
@@ -24,10 +29,10 @@ def dictCreate(fileName):
         for line in lines:
             line = line.split("\t")
             if len(line) == 4:
-                numOrgDict[lines[entryNum].strip()] = line[0] + "\t" + line[3].strip() + "\t" + line[2].strip()
+                numOrgDict[line[0].strip() + ".1"] = line[3]
                 entrezOutNum += 1
             elif len(line) == 3:
-                numOrgDict[lines[entryNum].strip()] = line[0] + "\t" + line[2].strip() + "\t" + line[1].strip()
+                numOrgDict[line[0].strip() + ".1"] = line[2]
                 entrezOutNum += 1
             entryNum += 1
         infile.close()
@@ -41,7 +46,7 @@ def EditBlastOut(IDandOrgDict, fileName):
     tempLine = ""
     with open(fileName, 'r') as infile: 
         outfile = open(outName,'w')
-        outfile.write("Prot\tID\tPerc\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tOrg\tGenus\n")
+        outfile.write("Prot\tID\tPerc\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tnull\tOrg\n")
         data = infile.readlines()
         i = 0
         for line in data:
@@ -51,10 +56,12 @@ def EditBlastOut(IDandOrgDict, fileName):
             tempNum = tempLine[1]
 
             if tempNum in IDandOrgDict:
-                taxon = IDandOrgDict[tempNum].split()[1]
+                taxon = IDandOrgDict[tempNum]
+                """
                 genusA = IDandOrgDict[tempNum].split()[2]
                 genusB = genusA.split()[0]
-                data[i] = data[i].strip("\n") + "\t" + taxon + "\t" + genusB + "\n"
+                """
+                data[i] = data[i].strip("\n") + "\t" + taxon
             i += 1
         outfile.writelines(data)
         infile.close()

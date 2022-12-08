@@ -67,3 +67,12 @@
     .
     .
   ```
+  **IsolateBin.py**
+  Takes the Blast output and returns a list of queries and how many hits to that query are within a specified bin range in the R histograms of HistogramPlot.R
+
+  **Usage:** python IsolateBin.py --inFile <HitFile> --min_percid <lowerBound> --max_percid <upperBound> --outfile <out_file_name>
+
+  **FunctionLabeler.py**
+  Used inconjuction with IsolateBin.py. Takes the output of IsolateBin and a features table and appends a function name to each query in the Bin output
+
+  **Usage:** python FunctionLabeler.py --inFile <IsolateBin.out> --functions <featureTable> --outfile <out_file_name>
